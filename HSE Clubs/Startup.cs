@@ -36,6 +36,7 @@ namespace HSE_Clubs
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
+                c.OperationFilter<SwaggerFileOperationFilter>();  
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
@@ -74,6 +75,8 @@ namespace HSE_Clubs
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            
+            app.UseStaticFiles();
 
             app.UseAuthorization();
 
