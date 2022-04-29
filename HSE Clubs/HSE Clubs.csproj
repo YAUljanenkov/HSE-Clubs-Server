@@ -22,11 +22,10 @@
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       </None>
-      <None Include="wwwroot\images\bf8e73fa-2526-4086-9122-a8905c7bafc3_photo_2022-04-06 15.11.35.jpeg" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="wwwroot" />
+      <Folder Include="wwwroot\images" />
     </ItemGroup>
 
 </Project>
