@@ -2,4 +2,6 @@ bin/
 obj/
 /packages/
 riderModule.iml
+.idea
 /_ReSharper.Caches/
+HSE\ Clubs/wwwroot/images/*
