@@ -13,6 +13,7 @@ namespace HSE_Clubs.Models
         public string Vk { get; set; } = "";
         public string Telegram { get; set; }  = "";
         public string PhotoPath { get; set; }  = "";
+        public bool IsShowContacts { get; set; } = true;
         public ICollection<Club> Clubs { get; set; } = new List<Club>();
     }
 }

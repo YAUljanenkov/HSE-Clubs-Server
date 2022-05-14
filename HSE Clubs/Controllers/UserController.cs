@@ -61,12 +61,14 @@ namespace HSE_Clubs.Controllers
         /// <param name="email">User's email.</param>
         /// <param name="vk">Link to user's VK in format "https://vk.com/userId"</param>
         /// <param name="telegram">Link to user's Telegram in format "https://t.me/userId"</param>
+        /// <param name="isShowContacts">User's contacts.</param>
         /// <returns>Ok if info is updated and Error if user not found.</returns>
         [HttpPost("{uniqueName}/update")]
         [Produces("application/json")]
         public IActionResult Update(string uniqueName, [FromForm] string name, [FromForm] string email,
-            [FromForm] string vk, [FromForm] string telegram)
+            [FromForm] string vk, [FromForm] string telegram, [FromForm] string isShowContacts)
         {
+            Console.WriteLine($"Got request from {uniqueName}");
             User user;
             try
             {
@@ -75,6 +77,8 @@ namespace HSE_Clubs.Controllers
                 user.Email = email ?? user.Email;
                 user.Telegram = telegram ?? user.Telegram;
                 user.Vk = vk ?? user.Vk;
+                Console.WriteLine(isShowContacts);
+                user.IsShowContacts = isShowContacts == "true";
                 db.SaveChanges();
             }
             catch (InvalidOperationException)
