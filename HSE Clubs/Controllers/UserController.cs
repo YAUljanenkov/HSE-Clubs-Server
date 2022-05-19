@@ -137,7 +137,7 @@ namespace HSE_Clubs.Controllers
         /// }
         /// </code>
         /// </example>
-        [HttpGet("{uniqueName}get_clubs")]
+        [HttpGet("{uniqueName}/get_clubs")]
         [Produces("application/json")]
         public IActionResult GetClubs(string uniqueName)
         {
